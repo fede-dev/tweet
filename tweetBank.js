@@ -11,7 +11,7 @@ function list() {
 function find(properties) {
   return lodash.cloneDeep(lodash.filter(data, properties));
 }
-module.exports = { add, list, find }
+module.exports = { add: add, list: list, find: find };
 
 const randArrayEl = function (arr) {
   return arr[Math.floor(Math.random() * arr.length)];
@@ -65,5 +65,4 @@ const getFakeTweet = function () {
 for (let i = 0; i < 10; i++) {
   module.exports.add(getFakeName(), getFakeTweet());
 }
-console.log(list())
-//module.exports = { add: add, list: list, find: find };
+console.log(list());
