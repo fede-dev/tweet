@@ -1,7 +1,7 @@
-const express = require( 'express' );
+const express = require('express');
 const morgan = require('morgan'); //middleware application logger
-const nunjucks = require( 'nunjucks' );
-
+const nunjucks = require('nunjucks');
+console.log("hola")
 const app = express(); // crea una instancia de una aplicación de express
 
 // Configurando Nunjucks
@@ -18,10 +18,10 @@ let tweetsDeEjemplo = [
 ];
 
 app.get('/', function (req, res) {
-    res.render( 'index', { tweets: tweetsDeEjemplo });
+    res.render('index', { tweets: tweetsDeEjemplo });
 });
 
-app.listen(3000, function(){
+app.listen(3000, function () {
     console.log('Estas escuhando en el puerto 3000')
 });
 
