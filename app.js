@@ -2,11 +2,11 @@
 const express = require('express');
 const morgan = require('morgan'); //middleware application logger
 const nunjucks = require('nunjucks');
-console.log("hola")
+const tweetBank = require('./tweetBank')
 
-const express = require("express");
-const morgan = require("morgan"); //middleware application logger
-const nunjucks = require("nunjucks");
+
+
+
 
 const app = express(); // crea una instancia de una aplicación de express
 
@@ -27,9 +27,7 @@ app.get('/', function (req, res) {
     res.render('index', { tweets: tweetsDeEjemplo });
 });
 
-app.listen(3000, function () {
-    console.log('Estas escuhando en el puerto 3000')
-});
+
 
 app.listen(3000, function () {
     console.log("Estas escuhando en el puerto 3000");

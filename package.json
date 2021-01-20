@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.4",
+    "lodash": "^4.17.20",
     "morgan": "^1.9.1",
     "nodemon": "^1.18.11",
     "nunjucks": "^3.2.0"
@@ -23,5 +24,6 @@
   "bugs": {
     "url": "https://github.com/WalkerPe/06-Tweety-Structure/issues"
   },
-  "homepage": "https://github.com/WalkerPe/06-Tweety-Structure#readme"
+  "homepage": "https://github.com/WalkerPe/06-Tweety-Structure#readme",
+  "keywords": []
 }
