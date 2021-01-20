@@ -11,6 +11,7 @@ function list() {
 function find(properties) {
     return lodash.cloneDeep(lodash.filter(data, properties));
 }
+module.exports = { add, list, find }
 
 const randArrayEl = function (arr) {
     return arr[Math.floor(Math.random() * arr.length)];
@@ -25,11 +26,9 @@ const getFakeTweet = function () {
     return "Plataforma 5 es " + randArrayEl(awesome_adj) + "! Los profesores simplemente son " + randArrayEl(awesome_adj) + ". #P5Love #codedreams";
 };
 
-module.exports = { add: add, list: list, find: find };
-
 for (let i = 0; i < 10; i++) {
     module.exports.add(getFakeName(), getFakeTweet());
 }
-
+console.log(list())
 //module.exports = { add: add, list: list, find: find };
 
