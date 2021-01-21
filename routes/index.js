@@ -1,4 +1,17 @@
-// escribir rutas aquí
-//hola mundo
+// routes;
+const express = require("express");
+const router = express.Router();
+const tweetBank = require("../tweetBank");
 
-// Hola somos uruguay y bolivia coders
+router.get("/", function (req, res) {
+  let tweets = tweetBank.list();
+  res.render("index", { tweets: tweets });
+});
+
+router.get("/users/:name", function (req, res) {
+  var name = req.params.name;
+  var list = tweetBank.find({ name: name });
+  res.render("index", { list: list });
+});
+
+module.exports = router;
