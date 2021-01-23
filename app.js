@@ -14,7 +14,7 @@ nunjucks.configure("views"); // apunta a nunjucks al directorio correcto para lo
 app.use(morgan("tiny"));
 app.use("/", routes);
 
-app.listen(3000, function () {
+app.listen(3002, function () {
   console.log("Estas escuhando en el puerto 3000");
 });
 
